@@ -1,1 +1,1 @@
-# usecallmanager
+# This is a repository to build a docker image from Asterisk patched with usecallmanager 
