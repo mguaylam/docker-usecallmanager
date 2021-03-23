@@ -12,4 +12,5 @@ RUN patch -p1 < ../cisco-usecallmanager-16.16.0.patch
 RUN CFLAGS="-DENABLE_SRTP_AES_GCM -DENABLE_SRTP_AES_256" ./configure
 RUN make
 RUN make install
-CMD asterisk -cvv
+RUN make config
+RUN service asterisk start
