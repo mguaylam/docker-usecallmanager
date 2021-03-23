@@ -1,4 +1,4 @@
-target "build" {
+target "release" {
   context = "./"
   dockerfile = "Dockerfile"
   platforms = [
