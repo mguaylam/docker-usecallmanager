@@ -9,5 +9,5 @@ target "release" {
     "linux/386",
     "linux/ppc64le"
   ]
-  tag = "mguaylam/usecallmanager:latest"
+  tags = "mguaylam/usecallmanager:latest"
 }
