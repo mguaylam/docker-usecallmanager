@@ -6,8 +6,7 @@ target "release" {
     "linux/arm/v6",
     "linux/arm/v7",
     "linux/arm64",
-    "linux/386",
-    "linux/ppc64le"
+    "linux/386"
   ]
   tags = [
     "mguaylam/usecallmanager:latest"
