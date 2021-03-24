@@ -7,7 +7,7 @@ ADD https://raw.githubusercontent.com/usecallmanagernz/patches/master/asterisk/c
 ADD http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-18.2.2.tar.gz /usr/src/
 WORKDIR /usr/src/
 RUN tar -zxvf asterisk-18.2.2.tar.gz
-WORKDIR asterisk-16.16.0
+WORKDIR asterisk-18.2.2
 RUN patch -p1 < ../cisco-usecallmanager-18.2.2.patch
 RUN CFLAGS="-DENABLE_SRTP_AES_GCM -DENABLE_SRTP_AES_256" ./configure
 RUN make
