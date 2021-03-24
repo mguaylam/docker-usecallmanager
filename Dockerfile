@@ -1,7 +1,21 @@
 FROM debian
 
-RUN apt update
-RUN apt --yes install wget patch gcc make g++ libedit-dev uuid-dev libjansson-dev libxml2-dev sqlite3 libsqlite3-dev bzip2
+RUN DEBIAN_FRONTEND=noninteractive apt-get update \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+        wget \
+        patch \
+        gcc \
+        make \
+        g++ \
+        libedit-dev \
+        uuid-dev \
+        libjansson-dev \
+        libxml2-dev \
+        sqlite3 \
+        libsqlite3-dev \
+        bzip2 \
+        lsb-base
+
 RUN mkdir -p /home/usecallmanager
 ADD https://raw.githubusercontent.com/usecallmanagernz/patches/master/asterisk/cisco-usecallmanager-16.16.0.patch /usr/src/
 ADD http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/asterisk-16.16.0.tar.gz /usr/src/
