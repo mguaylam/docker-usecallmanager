@@ -15,3 +15,4 @@ RUN make install
 RUN make config
 RUN make samples
 CMD service asterisk start
+ENTRYPOINT asterisk -cvv
