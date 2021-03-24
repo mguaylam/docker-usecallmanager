@@ -13,4 +13,5 @@ RUN CFLAGS="-DENABLE_SRTP_AES_GCM -DENABLE_SRTP_AES_256" ./configure
 RUN make
 RUN make install
 RUN make config
+RUN make samples
 CMD service asterisk start
